@@ -5,39 +5,39 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  OpenAPI\Client
- * @author   OpenAPI Generator team
+ * @package  SiSu\Client
+ * @author   SiSu Generator team
  * @link     https://openapi-generator.tech
  */
 
 /**
  * SISU POLICY API
  *
- * # Overview  Welcome to the simplesurance Policy API documentation. The API allows management (creating, viewing, canceling, etc.) of insurance policies. simplesurance offers a variety of insurance products, starting with smartphones and laptops, through bikes, glasses or watches and ending up with travel. We are constantly extending our catalog of products. All of our products can be managed via the Core API except for Travel. Travel requires a very specific set of input data in order to create a policy and therefore has a dedicated Travel API.   All the endpoints follow RESTful API principles. The documentation includes example requests and responses, to make the APIs easy to consume.  ## Environments and API Base URIs  simplesurance supports two environments:  1. Sandbox:  https://policy-api.sb-{partner-name}.sisu.sh  2. Production:  https://policy-api.simplesurance.de/  ## Sandbox environment  ### About  Sandbox is a development environment for integrating and testing simplesurance APIs. The sandbox version is not always the same as production. It may contain features that are in beta version, which means that they are not available in our production environment yet. Every partner has a dedicated sandbox environment that contains a predefined set of dummy accounts and transaction data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Production environment  ### About  The production environment is designed for use within your application when going live with real customers. The environment is fully scalable, secure and facilitates the use of real customer data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call. Production access tokens vary from the sandbox access token.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Message formats  Standard HTTP verbs and status codes are used for requests and response statuses. Request and response payloads are JSON encoded data formatted. Communication with the APIs is handled over HTTPS protocol only.  | Data |Standard | |-----------|-------| | Strings encoding| UTF-8 | | Datetime | ISO 8601 | | Currency codes | ISO 4217 |  ## Idempotency  We support the idempotency of POST requests. All the requests that have request_id parameter can be idempotent. If the same value is passed in request_id parameter in multiple requests, only the first request will make changes in our system (e.g. create an insurance policy). The following requests will return cached data. Only successful requests are cached, so bad requests will not be cached even if the same request_id is passed. Cached responses contain a custom x-sisu-cached header with value true. x-xisu-process-date header contains the time when the original request was processed.  ## Code generation  It is possible to generate client SDK out of OpenAPI specifications which is available as part of this documentation (see: Download OpenAPI specification button). The client SDK can be generated in the language of your choice. We recommend using [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator).  # Authentication  <!-- ReDoc-Inject: <security-definitions> -->
+ * # Overview  Welcome to the simplesurance Policy API documentation. The API allows management (creating, viewing, canceling, etc.) of insurance policies. simplesurance offers a variety of insurance products, starting with smartphones and laptops, through bikes, glasses or watches and ending up with travel. We are constantly extending our catalog of products. All of our products can be managed via the Core API except for Travel. Travel requires a very specific set of input data in order to create a policy and therefore has a dedicated Travel API.   All the endpoints follow RESTful API principles. The documentation includes example requests and responses, to make the APIs easy to consume.  ## Environments and API Base URIs  simplesurance supports two environments:  1. Sandbox:  https://policy-api.sb-{partner-name}.sisu.sh  2. Production:  https://policy-api.simplesurance.de/  ## Sandbox environment  ### About  Sandbox is a development environment for integrating and testing simplesurance APIs. The sandbox version is not always the same as production. It may contain features that are in beta version, which means that they are not available in our production environment yet. Every partner has a dedicated sandbox environment that contains a predefined set of dummy accounts and transaction data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Production environment  ### About  The production environment is designed for use within your application when going live with real customers. The environment is fully scalable, secure and facilitates the use of real customer data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call. Production access tokens vary from the sandbox access token.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Message formats  Standard HTTP verbs and status codes are used for requests and response statuses. Request and response payloads are JSON encoded data formatted. Communication with the APIs is handled over HTTPS protocol only.  | Data |Standard | |-----------|-------| | Strings encoding| UTF-8 | | Datetime | ISO 8601 | | Currency codes | ISO 4217 |  ## Idempotency  We support the idempotency of POST requests. All the requests that have request_id parameter can be idempotent. If the same value is passed in request_id parameter in multiple requests, only the first request will make changes in our system (e.g. create an insurance policy). The following requests will return cached data. Only successful requests are cached, so bad requests will not be cached even if the same request_id is passed. Cached responses contain a custom x-sisu-cached header with value true. x-xisu-process-date header contains the time when the original request was processed.  ## Code generation  It is possible to generate client SDK out of SiSu specifications which is available as part of this documentation (see: Download SiSu specification button). The client SDK can be generated in the language of your choice. We recommend using [SiSu Generator](https://github.com/SiSuTools/openapi-generator).  # Authentication  <!-- ReDoc-Inject: <security-definitions> -->
  *
- * The version of the OpenAPI document: 0.2.1
+ * The version of the SiSu document: 0.2.1
  * 
  * Generated by: https://openapi-generator.tech
- * OpenAPI Generator version: 5.0.0-SNAPSHOT
+ * SiSu Generator version: 5.0.0-SNAPSHOT
  */
 
 /**
- * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
+ * NOTE: This class is auto generated by SiSu Generator (https://openapi-generator.tech).
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SiSu\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SiSu\Client\ObjectSerializer;
 
 /**
  * TravelCreate Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
- * @author   OpenAPI Generator team
+ * @package  SiSu\Client
+ * @author   SiSu Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
  * @template TKey int|null
@@ -61,24 +61,24 @@ class TravelCreate implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'product' => 'string',
-        'destination' => '\OpenAPI\Client\Model\Country[]',
+        'destination' => '\SiSu\Client\Model\Country[]',
         'destination_group' => 'string',
-        'start_date' => '\OpenAPI\Client\Model\UpdatedAt',
-        'end_date' => '\OpenAPI\Client\Model\UpdatedAt',
+        'start_date' => '\SiSu\Client\Model\UpdatedAt',
+        'end_date' => '\SiSu\Client\Model\UpdatedAt',
         'country' => 'string',
         'language' => 'string',
         'integration_id' => 'string',
         'booking_number' => 'string',
-        'booking_date' => '\OpenAPI\Client\Model\UpdatedAt',
-        'customer' => '\OpenAPI\Client\Model\Customer',
-        'holder' => '\OpenAPI\Client\Model\Customer',
-        'external_id' => '\OpenAPI\Client\Model\ExternalId',
-        'gdpr_consent' => '\OpenAPI\Client\Model\GdprConsent',
-        'travellers' => '\OpenAPI\Client\Model\Traveller[]',
-        'request_id' => '\OpenAPI\Client\Model\RequestId',
-        'travel_price' => '\OpenAPI\Client\Model\BillingPrice',
-        'payment' => '\OpenAPI\Client\Model\Payment',
-        'is_test' => '\OpenAPI\Client\Model\IsTest'
+        'booking_date' => '\SiSu\Client\Model\UpdatedAt',
+        'customer' => '\SiSu\Client\Model\Customer',
+        'holder' => '\SiSu\Client\Model\Customer',
+        'external_id' => '\SiSu\Client\Model\ExternalId',
+        'gdpr_consent' => '\SiSu\Client\Model\GdprConsent',
+        'travellers' => '\SiSu\Client\Model\Traveller[]',
+        'request_id' => '\SiSu\Client\Model\RequestId',
+        'travel_price' => '\SiSu\Client\Model\BillingPrice',
+        'payment' => '\SiSu\Client\Model\Payment',
+        'is_test' => '\SiSu\Client\Model\IsTest'
     ];
 
     /**
@@ -413,7 +413,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets destination
      *
-     * @return \OpenAPI\Client\Model\Country[]|null
+     * @return \SiSu\Client\Model\Country[]|null
      */
     public function getDestination()
     {
@@ -423,7 +423,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets destination
      *
-     * @param \OpenAPI\Client\Model\Country[]|null $destination Destination countries of the travel. Represented by ISO 3166-1 alpha-2 country code. <br>*At least one of ('destination_group' or 'destination') properties has to be provided.*
+     * @param \SiSu\Client\Model\Country[]|null $destination Destination countries of the travel. Represented by ISO 3166-1 alpha-2 country code. <br>*At least one of ('destination_group' or 'destination') properties has to be provided.*
      *
      * @return self
      */
@@ -470,7 +470,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets start_date
      *
-     * @return \OpenAPI\Client\Model\UpdatedAt
+     * @return \SiSu\Client\Model\UpdatedAt
      */
     public function getStartDate()
     {
@@ -480,7 +480,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets start_date
      *
-     * @param \OpenAPI\Client\Model\UpdatedAt $start_date start_date
+     * @param \SiSu\Client\Model\UpdatedAt $start_date start_date
      *
      * @return self
      */
@@ -494,7 +494,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets end_date
      *
-     * @return \OpenAPI\Client\Model\UpdatedAt
+     * @return \SiSu\Client\Model\UpdatedAt
      */
     public function getEndDate()
     {
@@ -504,7 +504,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets end_date
      *
-     * @param \OpenAPI\Client\Model\UpdatedAt $end_date end_date
+     * @param \SiSu\Client\Model\UpdatedAt $end_date end_date
      *
      * @return self
      */
@@ -633,7 +633,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets booking_date
      *
-     * @return \OpenAPI\Client\Model\UpdatedAt|null
+     * @return \SiSu\Client\Model\UpdatedAt|null
      */
     public function getBookingDate()
     {
@@ -643,7 +643,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets booking_date
      *
-     * @param \OpenAPI\Client\Model\UpdatedAt|null $booking_date booking_date
+     * @param \SiSu\Client\Model\UpdatedAt|null $booking_date booking_date
      *
      * @return self
      */
@@ -657,7 +657,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \OpenAPI\Client\Model\Customer
+     * @return \SiSu\Client\Model\Customer
      */
     public function getCustomer()
     {
@@ -667,7 +667,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \OpenAPI\Client\Model\Customer $customer customer
+     * @param \SiSu\Client\Model\Customer $customer customer
      *
      * @return self
      */
@@ -681,7 +681,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets holder
      *
-     * @return \OpenAPI\Client\Model\Customer|null
+     * @return \SiSu\Client\Model\Customer|null
      */
     public function getHolder()
     {
@@ -691,7 +691,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets holder
      *
-     * @param \OpenAPI\Client\Model\Customer|null $holder holder
+     * @param \SiSu\Client\Model\Customer|null $holder holder
      *
      * @return self
      */
@@ -705,7 +705,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets external_id
      *
-     * @return \OpenAPI\Client\Model\ExternalId|null
+     * @return \SiSu\Client\Model\ExternalId|null
      */
     public function getExternalId()
     {
@@ -715,7 +715,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets external_id
      *
-     * @param \OpenAPI\Client\Model\ExternalId|null $external_id external_id
+     * @param \SiSu\Client\Model\ExternalId|null $external_id external_id
      *
      * @return self
      */
@@ -729,7 +729,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets gdpr_consent
      *
-     * @return \OpenAPI\Client\Model\GdprConsent
+     * @return \SiSu\Client\Model\GdprConsent
      */
     public function getGdprConsent()
     {
@@ -739,7 +739,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets gdpr_consent
      *
-     * @param \OpenAPI\Client\Model\GdprConsent $gdpr_consent gdpr_consent
+     * @param \SiSu\Client\Model\GdprConsent $gdpr_consent gdpr_consent
      *
      * @return self
      */
@@ -753,7 +753,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets travellers
      *
-     * @return \OpenAPI\Client\Model\Traveller[]
+     * @return \SiSu\Client\Model\Traveller[]
      */
     public function getTravellers()
     {
@@ -763,7 +763,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets travellers
      *
-     * @param \OpenAPI\Client\Model\Traveller[] $travellers Information about all travellers should be provided here, including the customer data, in case he/she is also a traveller.
+     * @param \SiSu\Client\Model\Traveller[] $travellers Information about all travellers should be provided here, including the customer data, in case he/she is also a traveller.
      *
      * @return self
      */
@@ -777,7 +777,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets request_id
      *
-     * @return \OpenAPI\Client\Model\RequestId|null
+     * @return \SiSu\Client\Model\RequestId|null
      */
     public function getRequestId()
     {
@@ -787,7 +787,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets request_id
      *
-     * @param \OpenAPI\Client\Model\RequestId|null $request_id request_id
+     * @param \SiSu\Client\Model\RequestId|null $request_id request_id
      *
      * @return self
      */
@@ -801,7 +801,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets travel_price
      *
-     * @return \OpenAPI\Client\Model\BillingPrice|null
+     * @return \SiSu\Client\Model\BillingPrice|null
      */
     public function getTravelPrice()
     {
@@ -811,7 +811,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets travel_price
      *
-     * @param \OpenAPI\Client\Model\BillingPrice|null $travel_price travel_price
+     * @param \SiSu\Client\Model\BillingPrice|null $travel_price travel_price
      *
      * @return self
      */
@@ -825,7 +825,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets payment
      *
-     * @return \OpenAPI\Client\Model\Payment|null
+     * @return \SiSu\Client\Model\Payment|null
      */
     public function getPayment()
     {
@@ -835,7 +835,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets payment
      *
-     * @param \OpenAPI\Client\Model\Payment|null $payment payment
+     * @param \SiSu\Client\Model\Payment|null $payment payment
      *
      * @return self
      */
@@ -849,7 +849,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Gets is_test
      *
-     * @return \OpenAPI\Client\Model\IsTest|null
+     * @return \SiSu\Client\Model\IsTest|null
      */
     public function getIsTest()
     {
@@ -859,7 +859,7 @@ class TravelCreate implements ModelInterface, ArrayAccess
     /**
      * Sets is_test
      *
-     * @param \OpenAPI\Client\Model\IsTest|null $is_test is_test
+     * @param \SiSu\Client\Model\IsTest|null $is_test is_test
      *
      * @return self
      */

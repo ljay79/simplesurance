@@ -4,29 +4,29 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  OpenAPI\Client
- * @author   OpenAPI Generator team
+ * @package  SiSu\Client
+ * @author   SiSu Generator team
  * @link     https://openapi-generator.tech
  */
 
 /**
  * SISU POLICY API
  *
- * # Overview  Welcome to the simplesurance Policy API documentation. The API allows management (creating, viewing, canceling, etc.) of insurance policies. simplesurance offers a variety of insurance products, starting with smartphones and laptops, through bikes, glasses or watches and ending up with travel. We are constantly extending our catalog of products. All of our products can be managed via the Core API except for Travel. Travel requires a very specific set of input data in order to create a policy and therefore has a dedicated Travel API.   All the endpoints follow RESTful API principles. The documentation includes example requests and responses, to make the APIs easy to consume.  ## Environments and API Base URIs  simplesurance supports two environments:  1. Sandbox:  https://policy-api.sb-{partner-name}.sisu.sh  2. Production:  https://policy-api.simplesurance.de/  ## Sandbox environment  ### About  Sandbox is a development environment for integrating and testing simplesurance APIs. The sandbox version is not always the same as production. It may contain features that are in beta version, which means that they are not available in our production environment yet. Every partner has a dedicated sandbox environment that contains a predefined set of dummy accounts and transaction data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Production environment  ### About  The production environment is designed for use within your application when going live with real customers. The environment is fully scalable, secure and facilitates the use of real customer data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call. Production access tokens vary from the sandbox access token.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Message formats  Standard HTTP verbs and status codes are used for requests and response statuses. Request and response payloads are JSON encoded data formatted. Communication with the APIs is handled over HTTPS protocol only.  | Data |Standard | |-----------|-------| | Strings encoding| UTF-8 | | Datetime | ISO 8601 | | Currency codes | ISO 4217 |  ## Idempotency  We support the idempotency of POST requests. All the requests that have request_id parameter can be idempotent. If the same value is passed in request_id parameter in multiple requests, only the first request will make changes in our system (e.g. create an insurance policy). The following requests will return cached data. Only successful requests are cached, so bad requests will not be cached even if the same request_id is passed. Cached responses contain a custom x-sisu-cached header with value true. x-xisu-process-date header contains the time when the original request was processed.  ## Code generation  It is possible to generate client SDK out of OpenAPI specifications which is available as part of this documentation (see: Download OpenAPI specification button). The client SDK can be generated in the language of your choice. We recommend using [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator).  # Authentication  <!-- ReDoc-Inject: <security-definitions> -->
+ * # Overview  Welcome to the simplesurance Policy API documentation. The API allows management (creating, viewing, canceling, etc.) of insurance policies. simplesurance offers a variety of insurance products, starting with smartphones and laptops, through bikes, glasses or watches and ending up with travel. We are constantly extending our catalog of products. All of our products can be managed via the Core API except for Travel. Travel requires a very specific set of input data in order to create a policy and therefore has a dedicated Travel API.   All the endpoints follow RESTful API principles. The documentation includes example requests and responses, to make the APIs easy to consume.  ## Environments and API Base URIs  simplesurance supports two environments:  1. Sandbox:  https://policy-api.sb-{partner-name}.sisu.sh  2. Production:  https://policy-api.simplesurance.de/  ## Sandbox environment  ### About  Sandbox is a development environment for integrating and testing simplesurance APIs. The sandbox version is not always the same as production. It may contain features that are in beta version, which means that they are not available in our production environment yet. Every partner has a dedicated sandbox environment that contains a predefined set of dummy accounts and transaction data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Production environment  ### About  The production environment is designed for use within your application when going live with real customers. The environment is fully scalable, secure and facilitates the use of real customer data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call. Production access tokens vary from the sandbox access token.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Message formats  Standard HTTP verbs and status codes are used for requests and response statuses. Request and response payloads are JSON encoded data formatted. Communication with the APIs is handled over HTTPS protocol only.  | Data |Standard | |-----------|-------| | Strings encoding| UTF-8 | | Datetime | ISO 8601 | | Currency codes | ISO 4217 |  ## Idempotency  We support the idempotency of POST requests. All the requests that have request_id parameter can be idempotent. If the same value is passed in request_id parameter in multiple requests, only the first request will make changes in our system (e.g. create an insurance policy). The following requests will return cached data. Only successful requests are cached, so bad requests will not be cached even if the same request_id is passed. Cached responses contain a custom x-sisu-cached header with value true. x-xisu-process-date header contains the time when the original request was processed.  ## Code generation  It is possible to generate client SDK out of SiSu specifications which is available as part of this documentation (see: Download SiSu specification button). The client SDK can be generated in the language of your choice. We recommend using [SiSu Generator](https://github.com/SiSuTools/openapi-generator).  # Authentication  <!-- ReDoc-Inject: <security-definitions> -->
  *
- * The version of the OpenAPI document: 0.2.1
+ * The version of the SiSu document: 0.2.1
  * 
  * Generated by: https://openapi-generator.tech
- * OpenAPI Generator version: 5.0.0-SNAPSHOT
+ * SiSu Generator version: 5.0.0-SNAPSHOT
  */
 
 /**
- * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
+ * NOTE: This class is auto generated by SiSu Generator (https://openapi-generator.tech).
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace SiSu\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,17 +34,17 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use SiSu\Client\ApiException;
+use SiSu\Client\Configuration;
+use SiSu\Client\HeaderSelector;
+use SiSu\Client\ObjectSerializer;
 
 /**
  * CoreApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
- * @author   OpenAPI Generator team
+ * @package  SiSu\Client
+ * @author   SiSu Generator team
  * @link     https://openapi-generator.tech
  */
 class CoreApi
@@ -73,7 +73,7 @@ class CoreApi
      * @param ClientInterface $client
      * @param Configuration   $config
      * @param HeaderSelector  $selector
-     * @param int             $host_index (Optional) host index to select the list of hosts if defined in the OpenAPI spec
+     * @param int             $host_index (Optional) host index to select the list of hosts if defined in the SiSu spec
      */
     public function __construct(
         ClientInterface $client = null,
@@ -119,11 +119,11 @@ class CoreApi
      * Operation cancelPolicy
      *
      * @param  object $policy_number policy_number (required)
-     * @param  \OpenAPI\Client\Model\CancelPolicyRequest $cancel_policy_request cancel_policy_request (required)
+     * @param  \SiSu\Client\Model\CancelPolicyRequest $cancel_policy_request cancel_policy_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \SiSu\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Ok|object|object
+     * @return \SiSu\Client\Model\Ok|object|object
      */
     public function cancelPolicy($policy_number, $cancel_policy_request)
     {
@@ -135,11 +135,11 @@ class CoreApi
      * Operation cancelPolicyWithHttpInfo
      *
      * @param  object $policy_number (required)
-     * @param  \OpenAPI\Client\Model\CancelPolicyRequest $cancel_policy_request (required)
+     * @param  \SiSu\Client\Model\CancelPolicyRequest $cancel_policy_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \SiSu\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Ok|object|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SiSu\Client\Model\Ok|object|object, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelPolicyWithHttpInfo($policy_number, $cancel_policy_request)
     {
@@ -176,14 +176,14 @@ class CoreApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Ok' === '\SplFileObject') {
+                    if ('\SiSu\Client\Model\Ok' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Ok', []),
+                        ObjectSerializer::deserialize($content, '\SiSu\Client\Model\Ok', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -213,7 +213,7 @@ class CoreApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Ok';
+            $returnType = '\SiSu\Client\Model\Ok';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -232,7 +232,7 @@ class CoreApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Ok',
+                        '\SiSu\Client\Model\Ok',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -264,7 +264,7 @@ class CoreApi
      * 
      *
      * @param  object $policy_number (required)
-     * @param  \OpenAPI\Client\Model\CancelPolicyRequest $cancel_policy_request (required)
+     * @param  \SiSu\Client\Model\CancelPolicyRequest $cancel_policy_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -285,14 +285,14 @@ class CoreApi
      * 
      *
      * @param  object $policy_number (required)
-     * @param  \OpenAPI\Client\Model\CancelPolicyRequest $cancel_policy_request (required)
+     * @param  \SiSu\Client\Model\CancelPolicyRequest $cancel_policy_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function cancelPolicyAsyncWithHttpInfo($policy_number, $cancel_policy_request)
     {
-        $returnType = '\OpenAPI\Client\Model\Ok';
+        $returnType = '\SiSu\Client\Model\Ok';
         $request = $this->cancelPolicyRequest($policy_number, $cancel_policy_request);
 
         return $this->client
@@ -333,7 +333,7 @@ class CoreApi
      * Create request for operation 'cancelPolicy'
      *
      * @param  object $policy_number (required)
-     * @param  \OpenAPI\Client\Model\CancelPolicyRequest $cancel_policy_request (required)
+     * @param  \SiSu\Client\Model\CancelPolicyRequest $cancel_policy_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -448,11 +448,11 @@ class CoreApi
     /**
      * Operation createPolicies
      *
-     * @param  \OpenAPI\Client\Model\CreatePoliciesRequest $create_policies_request create_policies_request (required)
+     * @param  \SiSu\Client\Model\CreatePoliciesRequest $create_policies_request create_policies_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \SiSu\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreatePoliciesResponse|object|\OpenAPI\Client\Model\InlineResponse409
+     * @return \SiSu\Client\Model\CreatePoliciesResponse|object|\SiSu\Client\Model\InlineResponse409
      */
     public function createPolicies($create_policies_request)
     {
@@ -463,11 +463,11 @@ class CoreApi
     /**
      * Operation createPoliciesWithHttpInfo
      *
-     * @param  \OpenAPI\Client\Model\CreatePoliciesRequest $create_policies_request (required)
+     * @param  \SiSu\Client\Model\CreatePoliciesRequest $create_policies_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \SiSu\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreatePoliciesResponse|object|\OpenAPI\Client\Model\InlineResponse409, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SiSu\Client\Model\CreatePoliciesResponse|object|\SiSu\Client\Model\InlineResponse409, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPoliciesWithHttpInfo($create_policies_request)
     {
@@ -504,14 +504,14 @@ class CoreApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\CreatePoliciesResponse' === '\SplFileObject') {
+                    if ('\SiSu\Client\Model\CreatePoliciesResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CreatePoliciesResponse', []),
+                        ObjectSerializer::deserialize($content, '\SiSu\Client\Model\CreatePoliciesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -528,20 +528,20 @@ class CoreApi
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\OpenAPI\Client\Model\InlineResponse409' === '\SplFileObject') {
+                    if ('\SiSu\Client\Model\InlineResponse409' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse409', []),
+                        ObjectSerializer::deserialize($content, '\SiSu\Client\Model\InlineResponse409', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CreatePoliciesResponse';
+            $returnType = '\SiSu\Client\Model\CreatePoliciesResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -560,7 +560,7 @@ class CoreApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreatePoliciesResponse',
+                        '\SiSu\Client\Model\CreatePoliciesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -576,7 +576,7 @@ class CoreApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse409',
+                        '\SiSu\Client\Model\InlineResponse409',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -591,7 +591,7 @@ class CoreApi
      *
      * 
      *
-     * @param  \OpenAPI\Client\Model\CreatePoliciesRequest $create_policies_request (required)
+     * @param  \SiSu\Client\Model\CreatePoliciesRequest $create_policies_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -611,14 +611,14 @@ class CoreApi
      *
      * 
      *
-     * @param  \OpenAPI\Client\Model\CreatePoliciesRequest $create_policies_request (required)
+     * @param  \SiSu\Client\Model\CreatePoliciesRequest $create_policies_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createPoliciesAsyncWithHttpInfo($create_policies_request)
     {
-        $returnType = '\OpenAPI\Client\Model\CreatePoliciesResponse';
+        $returnType = '\SiSu\Client\Model\CreatePoliciesResponse';
         $request = $this->createPoliciesRequest($create_policies_request);
 
         return $this->client
@@ -658,7 +658,7 @@ class CoreApi
     /**
      * Create request for operation 'createPolicies'
      *
-     * @param  \OpenAPI\Client\Model\CreatePoliciesRequest $create_policies_request (required)
+     * @param  \SiSu\Client\Model\CreatePoliciesRequest $create_policies_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -761,9 +761,9 @@ class CoreApi
      *
      * @param  object $policy_number policy_number (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \SiSu\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Policy|object
+     * @return \SiSu\Client\Model\Policy|object
      */
     public function getPolicy($policy_number)
     {
@@ -776,9 +776,9 @@ class CoreApi
      *
      * @param  object $policy_number (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \SiSu\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Policy|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SiSu\Client\Model\Policy|object, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPolicyWithHttpInfo($policy_number)
     {
@@ -815,14 +815,14 @@ class CoreApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Policy' === '\SplFileObject') {
+                    if ('\SiSu\Client\Model\Policy' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Policy', []),
+                        ObjectSerializer::deserialize($content, '\SiSu\Client\Model\Policy', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -840,7 +840,7 @@ class CoreApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Policy';
+            $returnType = '\SiSu\Client\Model\Policy';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -859,7 +859,7 @@ class CoreApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Policy',
+                        '\SiSu\Client\Model\Policy',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -909,7 +909,7 @@ class CoreApi
      */
     public function getPolicyAsyncWithHttpInfo($policy_number)
     {
-        $returnType = '\OpenAPI\Client\Model\Policy';
+        $returnType = '\SiSu\Client\Model\Policy';
         $request = $this->getPolicyRequest($policy_number);
 
         return $this->client
@@ -1060,12 +1060,12 @@ class CoreApi
      * @param  string $external_id external_id (optional)
      * @param  string $policy_number policy_number (optional)
      * @param  string $email email (optional)
-     * @param  \OpenAPI\Client\Model\ListPoliciesSorting $sorting_column sorting_column (optional)
+     * @param  \SiSu\Client\Model\ListPoliciesSorting $sorting_column sorting_column (optional)
      * @param  string $sorting_direction sorting_direction (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \SiSu\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListPoliciesResponse|object
+     * @return \SiSu\Client\Model\ListPoliciesResponse|object
      */
     public function listPolicies($page, $per_page, $external_id = null, $policy_number = null, $email = null, $sorting_column = null, $sorting_direction = null)
     {
@@ -1081,12 +1081,12 @@ class CoreApi
      * @param  string $external_id (optional)
      * @param  string $policy_number (optional)
      * @param  string $email (optional)
-     * @param  \OpenAPI\Client\Model\ListPoliciesSorting $sorting_column (optional)
+     * @param  \SiSu\Client\Model\ListPoliciesSorting $sorting_column (optional)
      * @param  string $sorting_direction (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \SiSu\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListPoliciesResponse|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SiSu\Client\Model\ListPoliciesResponse|object, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPoliciesWithHttpInfo($page, $per_page, $external_id = null, $policy_number = null, $email = null, $sorting_column = null, $sorting_direction = null)
     {
@@ -1123,14 +1123,14 @@ class CoreApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListPoliciesResponse' === '\SplFileObject') {
+                    if ('\SiSu\Client\Model\ListPoliciesResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListPoliciesResponse', []),
+                        ObjectSerializer::deserialize($content, '\SiSu\Client\Model\ListPoliciesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1148,7 +1148,7 @@ class CoreApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListPoliciesResponse';
+            $returnType = '\SiSu\Client\Model\ListPoliciesResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1167,7 +1167,7 @@ class CoreApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListPoliciesResponse',
+                        '\SiSu\Client\Model\ListPoliciesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1195,7 +1195,7 @@ class CoreApi
      * @param  string $external_id (optional)
      * @param  string $policy_number (optional)
      * @param  string $email (optional)
-     * @param  \OpenAPI\Client\Model\ListPoliciesSorting $sorting_column (optional)
+     * @param  \SiSu\Client\Model\ListPoliciesSorting $sorting_column (optional)
      * @param  string $sorting_direction (optional)
      *
      * @throws \InvalidArgumentException
@@ -1221,7 +1221,7 @@ class CoreApi
      * @param  string $external_id (optional)
      * @param  string $policy_number (optional)
      * @param  string $email (optional)
-     * @param  \OpenAPI\Client\Model\ListPoliciesSorting $sorting_column (optional)
+     * @param  \SiSu\Client\Model\ListPoliciesSorting $sorting_column (optional)
      * @param  string $sorting_direction (optional)
      *
      * @throws \InvalidArgumentException
@@ -1229,7 +1229,7 @@ class CoreApi
      */
     public function listPoliciesAsyncWithHttpInfo($page, $per_page, $external_id = null, $policy_number = null, $email = null, $sorting_column = null, $sorting_direction = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ListPoliciesResponse';
+        $returnType = '\SiSu\Client\Model\ListPoliciesResponse';
         $request = $this->listPoliciesRequest($page, $per_page, $external_id, $policy_number, $email, $sorting_column, $sorting_direction);
 
         return $this->client
@@ -1274,7 +1274,7 @@ class CoreApi
      * @param  string $external_id (optional)
      * @param  string $policy_number (optional)
      * @param  string $email (optional)
-     * @param  \OpenAPI\Client\Model\ListPoliciesSorting $sorting_column (optional)
+     * @param  \SiSu\Client\Model\ListPoliciesSorting $sorting_column (optional)
      * @param  string $sorting_direction (optional)
      *
      * @throws \InvalidArgumentException

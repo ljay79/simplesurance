@@ -5,39 +5,39 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  OpenAPI\Client
- * @author   OpenAPI Generator team
+ * @package  SiSu\Client
+ * @author   SiSu Generator team
  * @link     https://openapi-generator.tech
  */
 
 /**
  * SISU POLICY API
  *
- * # Overview  Welcome to the simplesurance Policy API documentation. The API allows management (creating, viewing, canceling, etc.) of insurance policies. simplesurance offers a variety of insurance products, starting with smartphones and laptops, through bikes, glasses or watches and ending up with travel. We are constantly extending our catalog of products. All of our products can be managed via the Core API except for Travel. Travel requires a very specific set of input data in order to create a policy and therefore has a dedicated Travel API.   All the endpoints follow RESTful API principles. The documentation includes example requests and responses, to make the APIs easy to consume.  ## Environments and API Base URIs  simplesurance supports two environments:  1. Sandbox:  https://policy-api.sb-{partner-name}.sisu.sh  2. Production:  https://policy-api.simplesurance.de/  ## Sandbox environment  ### About  Sandbox is a development environment for integrating and testing simplesurance APIs. The sandbox version is not always the same as production. It may contain features that are in beta version, which means that they are not available in our production environment yet. Every partner has a dedicated sandbox environment that contains a predefined set of dummy accounts and transaction data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Production environment  ### About  The production environment is designed for use within your application when going live with real customers. The environment is fully scalable, secure and facilitates the use of real customer data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call. Production access tokens vary from the sandbox access token.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Message formats  Standard HTTP verbs and status codes are used for requests and response statuses. Request and response payloads are JSON encoded data formatted. Communication with the APIs is handled over HTTPS protocol only.  | Data |Standard | |-----------|-------| | Strings encoding| UTF-8 | | Datetime | ISO 8601 | | Currency codes | ISO 4217 |  ## Idempotency  We support the idempotency of POST requests. All the requests that have request_id parameter can be idempotent. If the same value is passed in request_id parameter in multiple requests, only the first request will make changes in our system (e.g. create an insurance policy). The following requests will return cached data. Only successful requests are cached, so bad requests will not be cached even if the same request_id is passed. Cached responses contain a custom x-sisu-cached header with value true. x-xisu-process-date header contains the time when the original request was processed.  ## Code generation  It is possible to generate client SDK out of OpenAPI specifications which is available as part of this documentation (see: Download OpenAPI specification button). The client SDK can be generated in the language of your choice. We recommend using [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator).  # Authentication  <!-- ReDoc-Inject: <security-definitions> -->
+ * # Overview  Welcome to the simplesurance Policy API documentation. The API allows management (creating, viewing, canceling, etc.) of insurance policies. simplesurance offers a variety of insurance products, starting with smartphones and laptops, through bikes, glasses or watches and ending up with travel. We are constantly extending our catalog of products. All of our products can be managed via the Core API except for Travel. Travel requires a very specific set of input data in order to create a policy and therefore has a dedicated Travel API.   All the endpoints follow RESTful API principles. The documentation includes example requests and responses, to make the APIs easy to consume.  ## Environments and API Base URIs  simplesurance supports two environments:  1. Sandbox:  https://policy-api.sb-{partner-name}.sisu.sh  2. Production:  https://policy-api.simplesurance.de/  ## Sandbox environment  ### About  Sandbox is a development environment for integrating and testing simplesurance APIs. The sandbox version is not always the same as production. It may contain features that are in beta version, which means that they are not available in our production environment yet. Every partner has a dedicated sandbox environment that contains a predefined set of dummy accounts and transaction data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Production environment  ### About  The production environment is designed for use within your application when going live with real customers. The environment is fully scalable, secure and facilitates the use of real customer data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call. Production access tokens vary from the sandbox access token.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Message formats  Standard HTTP verbs and status codes are used for requests and response statuses. Request and response payloads are JSON encoded data formatted. Communication with the APIs is handled over HTTPS protocol only.  | Data |Standard | |-----------|-------| | Strings encoding| UTF-8 | | Datetime | ISO 8601 | | Currency codes | ISO 4217 |  ## Idempotency  We support the idempotency of POST requests. All the requests that have request_id parameter can be idempotent. If the same value is passed in request_id parameter in multiple requests, only the first request will make changes in our system (e.g. create an insurance policy). The following requests will return cached data. Only successful requests are cached, so bad requests will not be cached even if the same request_id is passed. Cached responses contain a custom x-sisu-cached header with value true. x-xisu-process-date header contains the time when the original request was processed.  ## Code generation  It is possible to generate client SDK out of SiSu specifications which is available as part of this documentation (see: Download SiSu specification button). The client SDK can be generated in the language of your choice. We recommend using [SiSu Generator](https://github.com/SiSuTools/openapi-generator).  # Authentication  <!-- ReDoc-Inject: <security-definitions> -->
  *
- * The version of the OpenAPI document: 0.2.1
+ * The version of the SiSu document: 0.2.1
  * 
  * Generated by: https://openapi-generator.tech
- * OpenAPI Generator version: 5.0.0-SNAPSHOT
+ * SiSu Generator version: 5.0.0-SNAPSHOT
  */
 
 /**
- * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
+ * NOTE: This class is auto generated by SiSu Generator (https://openapi-generator.tech).
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SiSu\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SiSu\Client\ObjectSerializer;
 
 /**
  * BasePolicy Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
- * @author   OpenAPI Generator team
+ * @package  SiSu\Client
+ * @author   SiSu Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
  * @template TKey int|null
@@ -60,19 +60,19 @@ class BasePolicy implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'activated_at' => '\OpenAPI\Client\Model\UpdatedAt',
+        'activated_at' => '\SiSu\Client\Model\UpdatedAt',
         'updated_at' => '\DateTime',
-        'cancelled_at' => '\OpenAPI\Client\Model\UpdatedAt',
+        'cancelled_at' => '\SiSu\Client\Model\UpdatedAt',
         'coverages' => 'string[]',
-        'customer' => '\OpenAPI\Client\Model\BasePolicyCustomer',
-        'holder' => '\OpenAPI\Client\Model\Customer',
-        'documents' => '\OpenAPI\Client\Model\Items[]',
+        'customer' => '\SiSu\Client\Model\BasePolicyCustomer',
+        'holder' => '\SiSu\Client\Model\Customer',
+        'documents' => '\SiSu\Client\Model\Items[]',
         'direct_claim_url' => 'string',
-        'expires_at' => '\OpenAPI\Client\Model\UpdatedAt',
+        'expires_at' => '\SiSu\Client\Model\UpdatedAt',
         'policy_number' => 'string',
-        'identifiers' => '\OpenAPI\Client\Model\BasePolicyIdentifiers[]',
-        'initial_payment_done' => '\OpenAPI\Client\Model\InitialPaymentDone',
-        'installments' => '\OpenAPI\Client\Model\Installements[]'
+        'identifiers' => '\SiSu\Client\Model\BasePolicyIdentifiers[]',
+        'initial_payment_done' => '\SiSu\Client\Model\InitialPaymentDone',
+        'installments' => '\SiSu\Client\Model\Installements[]'
     ];
 
     /**
@@ -340,7 +340,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets activated_at
      *
-     * @return \OpenAPI\Client\Model\UpdatedAt|null
+     * @return \SiSu\Client\Model\UpdatedAt|null
      */
     public function getActivatedAt()
     {
@@ -350,7 +350,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets activated_at
      *
-     * @param \OpenAPI\Client\Model\UpdatedAt|null $activated_at activated_at
+     * @param \SiSu\Client\Model\UpdatedAt|null $activated_at activated_at
      *
      * @return self
      */
@@ -388,7 +388,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets cancelled_at
      *
-     * @return \OpenAPI\Client\Model\UpdatedAt|null
+     * @return \SiSu\Client\Model\UpdatedAt|null
      */
     public function getCancelledAt()
     {
@@ -398,7 +398,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets cancelled_at
      *
-     * @param \OpenAPI\Client\Model\UpdatedAt|null $cancelled_at cancelled_at
+     * @param \SiSu\Client\Model\UpdatedAt|null $cancelled_at cancelled_at
      *
      * @return self
      */
@@ -445,7 +445,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \OpenAPI\Client\Model\BasePolicyCustomer|null
+     * @return \SiSu\Client\Model\BasePolicyCustomer|null
      */
     public function getCustomer()
     {
@@ -455,7 +455,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \OpenAPI\Client\Model\BasePolicyCustomer|null $customer customer
+     * @param \SiSu\Client\Model\BasePolicyCustomer|null $customer customer
      *
      * @return self
      */
@@ -469,7 +469,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets holder
      *
-     * @return \OpenAPI\Client\Model\Customer|null
+     * @return \SiSu\Client\Model\Customer|null
      */
     public function getHolder()
     {
@@ -479,7 +479,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets holder
      *
-     * @param \OpenAPI\Client\Model\Customer|null $holder holder
+     * @param \SiSu\Client\Model\Customer|null $holder holder
      *
      * @return self
      */
@@ -493,7 +493,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets documents
      *
-     * @return \OpenAPI\Client\Model\Items[]|null
+     * @return \SiSu\Client\Model\Items[]|null
      */
     public function getDocuments()
     {
@@ -503,7 +503,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets documents
      *
-     * @param \OpenAPI\Client\Model\Items[]|null $documents documents
+     * @param \SiSu\Client\Model\Items[]|null $documents documents
      *
      * @return self
      */
@@ -541,7 +541,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets expires_at
      *
-     * @return \OpenAPI\Client\Model\UpdatedAt|null
+     * @return \SiSu\Client\Model\UpdatedAt|null
      */
     public function getExpiresAt()
     {
@@ -551,7 +551,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets expires_at
      *
-     * @param \OpenAPI\Client\Model\UpdatedAt|null $expires_at expires_at
+     * @param \SiSu\Client\Model\UpdatedAt|null $expires_at expires_at
      *
      * @return self
      */
@@ -589,7 +589,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets identifiers
      *
-     * @return \OpenAPI\Client\Model\BasePolicyIdentifiers[]|null
+     * @return \SiSu\Client\Model\BasePolicyIdentifiers[]|null
      */
     public function getIdentifiers()
     {
@@ -599,7 +599,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets identifiers
      *
-     * @param \OpenAPI\Client\Model\BasePolicyIdentifiers[]|null $identifiers set of policy-specific identifiers (e.g. booking number, travel start date)
+     * @param \SiSu\Client\Model\BasePolicyIdentifiers[]|null $identifiers set of policy-specific identifiers (e.g. booking number, travel start date)
      *
      * @return self
      */
@@ -613,7 +613,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets initial_payment_done
      *
-     * @return \OpenAPI\Client\Model\InitialPaymentDone
+     * @return \SiSu\Client\Model\InitialPaymentDone
      */
     public function getInitialPaymentDone()
     {
@@ -623,7 +623,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets initial_payment_done
      *
-     * @param \OpenAPI\Client\Model\InitialPaymentDone $initial_payment_done initial_payment_done
+     * @param \SiSu\Client\Model\InitialPaymentDone $initial_payment_done initial_payment_done
      *
      * @return self
      */
@@ -637,7 +637,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets installments
      *
-     * @return \OpenAPI\Client\Model\Installements[]|null
+     * @return \SiSu\Client\Model\Installements[]|null
      */
     public function getInstallments()
     {
@@ -647,7 +647,7 @@ class BasePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets installments
      *
-     * @param \OpenAPI\Client\Model\Installements[]|null $installments installments
+     * @param \SiSu\Client\Model\Installements[]|null $installments installments
      *
      * @return self
      */

@@ -4,29 +4,29 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  OpenAPI\Client
- * @author   OpenAPI Generator team
+ * @package  SiSu\Client
+ * @author   SiSu Generator team
  * @link     https://openapi-generator.tech
  */
 
 /**
  * SISU POLICY API
  *
- * # Overview  Welcome to the simplesurance Policy API documentation. The API allows management (creating, viewing, canceling, etc.) of insurance policies. simplesurance offers a variety of insurance products, starting with smartphones and laptops, through bikes, glasses or watches and ending up with travel. We are constantly extending our catalog of products. All of our products can be managed via the Core API except for Travel. Travel requires a very specific set of input data in order to create a policy and therefore has a dedicated Travel API.   All the endpoints follow RESTful API principles. The documentation includes example requests and responses, to make the APIs easy to consume.  ## Environments and API Base URIs  simplesurance supports two environments:  1. Sandbox:  https://policy-api.sb-{partner-name}.sisu.sh  2. Production:  https://policy-api.simplesurance.de/  ## Sandbox environment  ### About  Sandbox is a development environment for integrating and testing simplesurance APIs. The sandbox version is not always the same as production. It may contain features that are in beta version, which means that they are not available in our production environment yet. Every partner has a dedicated sandbox environment that contains a predefined set of dummy accounts and transaction data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Production environment  ### About  The production environment is designed for use within your application when going live with real customers. The environment is fully scalable, secure and facilitates the use of real customer data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call. Production access tokens vary from the sandbox access token.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Message formats  Standard HTTP verbs and status codes are used for requests and response statuses. Request and response payloads are JSON encoded data formatted. Communication with the APIs is handled over HTTPS protocol only.  | Data |Standard | |-----------|-------| | Strings encoding| UTF-8 | | Datetime | ISO 8601 | | Currency codes | ISO 4217 |  ## Idempotency  We support the idempotency of POST requests. All the requests that have request_id parameter can be idempotent. If the same value is passed in request_id parameter in multiple requests, only the first request will make changes in our system (e.g. create an insurance policy). The following requests will return cached data. Only successful requests are cached, so bad requests will not be cached even if the same request_id is passed. Cached responses contain a custom x-sisu-cached header with value true. x-xisu-process-date header contains the time when the original request was processed.  ## Code generation  It is possible to generate client SDK out of OpenAPI specifications which is available as part of this documentation (see: Download OpenAPI specification button). The client SDK can be generated in the language of your choice. We recommend using [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator).  # Authentication  <!-- ReDoc-Inject: <security-definitions> -->
+ * # Overview  Welcome to the simplesurance Policy API documentation. The API allows management (creating, viewing, canceling, etc.) of insurance policies. simplesurance offers a variety of insurance products, starting with smartphones and laptops, through bikes, glasses or watches and ending up with travel. We are constantly extending our catalog of products. All of our products can be managed via the Core API except for Travel. Travel requires a very specific set of input data in order to create a policy and therefore has a dedicated Travel API.   All the endpoints follow RESTful API principles. The documentation includes example requests and responses, to make the APIs easy to consume.  ## Environments and API Base URIs  simplesurance supports two environments:  1. Sandbox:  https://policy-api.sb-{partner-name}.sisu.sh  2. Production:  https://policy-api.simplesurance.de/  ## Sandbox environment  ### About  Sandbox is a development environment for integrating and testing simplesurance APIs. The sandbox version is not always the same as production. It may contain features that are in beta version, which means that they are not available in our production environment yet. Every partner has a dedicated sandbox environment that contains a predefined set of dummy accounts and transaction data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Production environment  ### About  The production environment is designed for use within your application when going live with real customers. The environment is fully scalable, secure and facilitates the use of real customer data.  ### API Access  You will receive an access token that must be supplied as a Bearer token within every service API call. Production access tokens vary from the sandbox access token.  Details on the authentication process can be found in the Authentication section of this documentation.  ## Message formats  Standard HTTP verbs and status codes are used for requests and response statuses. Request and response payloads are JSON encoded data formatted. Communication with the APIs is handled over HTTPS protocol only.  | Data |Standard | |-----------|-------| | Strings encoding| UTF-8 | | Datetime | ISO 8601 | | Currency codes | ISO 4217 |  ## Idempotency  We support the idempotency of POST requests. All the requests that have request_id parameter can be idempotent. If the same value is passed in request_id parameter in multiple requests, only the first request will make changes in our system (e.g. create an insurance policy). The following requests will return cached data. Only successful requests are cached, so bad requests will not be cached even if the same request_id is passed. Cached responses contain a custom x-sisu-cached header with value true. x-xisu-process-date header contains the time when the original request was processed.  ## Code generation  It is possible to generate client SDK out of SiSu specifications which is available as part of this documentation (see: Download SiSu specification button). The client SDK can be generated in the language of your choice. We recommend using [SiSu Generator](https://github.com/SiSuTools/openapi-generator).  # Authentication  <!-- ReDoc-Inject: <security-definitions> -->
  *
- * The version of the OpenAPI document: 0.2.1
+ * The version of the SiSu document: 0.2.1
  * 
  * Generated by: https://openapi-generator.tech
- * OpenAPI Generator version: 5.0.0-SNAPSHOT
+ * SiSu Generator version: 5.0.0-SNAPSHOT
  */
 
 /**
- * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
+ * NOTE: This class is auto generated by SiSu Generator (https://openapi-generator.tech).
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace SiSu\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,17 +34,17 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use SiSu\Client\ApiException;
+use SiSu\Client\Configuration;
+use SiSu\Client\HeaderSelector;
+use SiSu\Client\ObjectSerializer;
 
 /**
  * ProductApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
- * @author   OpenAPI Generator team
+ * @package  SiSu\Client
+ * @author   SiSu Generator team
  * @link     https://openapi-generator.tech
  */
 class ProductApi
@@ -73,7 +73,7 @@ class ProductApi
      * @param ClientInterface $client
      * @param Configuration   $config
      * @param HeaderSelector  $selector
-     * @param int             $host_index (Optional) host index to select the list of hosts if defined in the OpenAPI spec
+     * @param int             $host_index (Optional) host index to select the list of hosts if defined in the SiSu spec
      */
     public function __construct(
         ClientInterface $client = null,
@@ -127,9 +127,9 @@ class ProductApi
      * @param  string $sorting_column sorting_column (optional)
      * @param  object $sorting_direction sorting_direction (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \SiSu\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse200|\OpenAPI\Client\Model\InlineResponse400
+     * @return \SiSu\Client\Model\InlineResponse200|\SiSu\Client\Model\InlineResponse400
      */
     public function listProducts($page, $per_page, $categories = null, $countries = null, $product_types = null, $integration_type = null, $sorting_column = null, $sorting_direction = null)
     {
@@ -149,9 +149,9 @@ class ProductApi
      * @param  string $sorting_column (optional)
      * @param  object $sorting_direction (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \SiSu\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse200|\OpenAPI\Client\Model\InlineResponse400, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SiSu\Client\Model\InlineResponse200|\SiSu\Client\Model\InlineResponse400, HTTP status code, HTTP response headers (array of strings)
      */
     public function listProductsWithHttpInfo($page, $per_page, $categories = null, $countries = null, $product_types = null, $integration_type = null, $sorting_column = null, $sorting_direction = null)
     {
@@ -188,32 +188,32 @@ class ProductApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse200' === '\SplFileObject') {
+                    if ('\SiSu\Client\Model\InlineResponse200' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse200', []),
+                        ObjectSerializer::deserialize($content, '\SiSu\Client\Model\InlineResponse200', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\InlineResponse400' === '\SplFileObject') {
+                    if ('\SiSu\Client\Model\InlineResponse400' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse400', []),
+                        ObjectSerializer::deserialize($content, '\SiSu\Client\Model\InlineResponse400', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse200';
+            $returnType = '\SiSu\Client\Model\InlineResponse200';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -232,7 +232,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse200',
+                        '\SiSu\Client\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -240,7 +240,7 @@ class ProductApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse400',
+                        '\SiSu\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -296,7 +296,7 @@ class ProductApi
      */
     public function listProductsAsyncWithHttpInfo($page, $per_page, $categories = null, $countries = null, $product_types = null, $integration_type = null, $sorting_column = null, $sorting_direction = null)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse200';
+        $returnType = '\SiSu\Client\Model\InlineResponse200';
         $request = $this->listProductsRequest($page, $per_page, $categories, $countries, $product_types, $integration_type, $sorting_column, $sorting_direction);
 
         return $this->client
