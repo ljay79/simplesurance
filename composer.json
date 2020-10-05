@@ -28,7 +28,7 @@
         "friendsofphp/php-cs-fixer": "^2.12"
     },
     "autoload": {
-        "psr-4": { "SiSu\\Client\\" : "lib/" }
+        "psr-4": { "SiSu\\Client\\" : "src/" }
     },
     "autoload-dev": {
         "psr-4": { "SiSu\\Client\\Test\\" : "test/" }
