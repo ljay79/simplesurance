@@ -45,7 +45,7 @@ use \SiSu\Client\ObjectSerializer;
  */
 class CreatePoliciesRequest implements ModelInterface, ArrayAccess
 {
-    public const DISCRIMINATOR = null;
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -60,7 +60,7 @@ class CreatePoliciesRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'country' => '\SiSu\Client\Model\Country',
+        'country' => 'string',
         'external_id' => 'string',
         'integration_id' => 'string',
         'language' => '\SiSu\Client\Model\Language',
@@ -281,7 +281,7 @@ class CreatePoliciesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets country
      *
-     * @return \SiSu\Client\Model\Country
+     * @return string
      */
     public function getCountry()
     {
@@ -291,7 +291,7 @@ class CreatePoliciesRequest implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param \SiSu\Client\Model\Country $country country
+     * @param string $country country
      *
      * @return self
      */

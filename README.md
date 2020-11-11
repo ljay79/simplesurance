@@ -158,11 +158,6 @@ Class | Method | HTTP request | Description
 *CoreApi* | [**getPolicy**](docs/Api/CoreApi.md#getpolicy) | **GET** /policies/{policy_number} | 
 *CoreApi* | [**listPolicies**](docs/Api/CoreApi.md#listpolicies) | **GET** /policies | 
 *ProductApi* | [**listProducts**](docs/Api/ProductApi.md#listproducts) | **GET** /products | 
-*TravelApi* | [**calculateTravelPolicy**](docs/Api/TravelApi.md#calculatetravelpolicy) | **POST** /travel/policies/calculate | 
-*TravelApi* | [**cancelTravelPolicy**](docs/Api/TravelApi.md#canceltravelpolicy) | **POST** /travel/policies/{policy_number}/cancel | 
-*TravelApi* | [**createTravelPolicy**](docs/Api/TravelApi.md#createtravelpolicy) | **POST** /travel/policies | 
-*TravelApi* | [**getTravelPolicy**](docs/Api/TravelApi.md#gettravelpolicy) | **GET** /travel/policies/{policy_number} | 
-*TravelApi* | [**listTravelPolicies**](docs/Api/TravelApi.md#listtravelpolicies) | **GET** /travel/policies | 
 
 
 ## Documentation For Models
@@ -202,15 +197,6 @@ Class | Method | HTTP request | Description
  - [PolicyInfoDocuments](docs/Model/PolicyInfoDocuments.md)
  - [Refund](docs/Model/Refund.md)
  - [RefundBillingPrice](docs/Model/RefundBillingPrice.md)
- - [TravelCalculate](docs/Model/TravelCalculate.md)
- - [TravelCalculateAllOf](docs/Model/TravelCalculateAllOf.md)
- - [TravelCalculation](docs/Model/TravelCalculation.md)
- - [TravelCreate](docs/Model/TravelCreate.md)
- - [TravelCreateAllOf](docs/Model/TravelCreateAllOf.md)
- - [Traveller](docs/Model/Traveller.md)
- - [TravellerAllOf](docs/Model/TravellerAllOf.md)
- - [TravellerBaseInfo](docs/Model/TravellerBaseInfo.md)
- - [TripBaseInfo](docs/Model/TripBaseInfo.md)
 
 
 ## Documentation For Authorization

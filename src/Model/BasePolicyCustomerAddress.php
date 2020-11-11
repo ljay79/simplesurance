@@ -45,7 +45,7 @@ use \SiSu\Client\ObjectSerializer;
  */
 class BasePolicyCustomerAddress implements ModelInterface, ArrayAccess
 {
-    public const DISCRIMINATOR = null;
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -61,7 +61,7 @@ class BasePolicyCustomerAddress implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'city' => 'string',
-        'country' => '\SiSu\Client\Model\Country',
+        'country' => 'string',
         'house_number' => 'string',
         'region' => 'string',
         'street' => 'string',
@@ -301,7 +301,7 @@ class BasePolicyCustomerAddress implements ModelInterface, ArrayAccess
     /**
      * Gets country
      *
-     * @return \SiSu\Client\Model\Country
+     * @return string
      */
     public function getCountry()
     {
@@ -311,7 +311,7 @@ class BasePolicyCustomerAddress implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param \SiSu\Client\Model\Country $country country
+     * @param string $country country
      *
      * @return self
      */

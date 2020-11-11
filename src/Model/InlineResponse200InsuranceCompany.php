@@ -45,7 +45,7 @@ use \SiSu\Client\ObjectSerializer;
  */
 class InlineResponse200InsuranceCompany implements ModelInterface, ArrayAccess
 {
-    public const DISCRIMINATOR = null;
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.

@@ -45,7 +45,7 @@ use \SiSu\Client\ObjectSerializer;
  */
 class PolicyAllOf implements ModelInterface, ArrayAccess
 {
-    public const DISCRIMINATOR = null;
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -60,7 +60,7 @@ class PolicyAllOf implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'created_at' => '\SiSu\Client\Model\UpdatedAt',
+        'created_at' => '\DateTime',
         'insured_objects' => '\SiSu\Client\Model\Items[]',
         'tariff_name' => 'string'
     ];
@@ -224,7 +224,7 @@ class PolicyAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets created_at
      *
-     * @return \SiSu\Client\Model\UpdatedAt|null
+     * @return \DateTime|null
      */
     public function getCreatedAt()
     {
@@ -234,7 +234,7 @@ class PolicyAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets created_at
      *
-     * @param \SiSu\Client\Model\UpdatedAt|null $created_at created_at
+     * @param \DateTime|null $created_at created_at
      *
      * @return self
      */

@@ -45,7 +45,7 @@ use \SiSu\Client\ObjectSerializer;
  */
 class InlineResponse200Tariffs implements ModelInterface, ArrayAccess
 {
-    public const DISCRIMINATOR = null;
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -64,7 +64,7 @@ class InlineResponse200Tariffs implements ModelInterface, ArrayAccess
         'categories' => '\SiSu\Client\Model\Category[]',
         'coverages' => '\SiSu\Client\Model\Items[]',
         'extras' => '\SiSu\Client\Model\Items[]',
-        'countries' => '\SiSu\Client\Model\Country[]',
+        'countries' => 'string[]',
         'product_codes' => '\SiSu\Client\Model\InlineResponse200ProductCodes[]',
         'general_deductibles' => '\SiSu\Client\Model\InlineResponse200GeneralDeductibles[]'
     ];
@@ -344,7 +344,7 @@ class InlineResponse200Tariffs implements ModelInterface, ArrayAccess
     /**
      * Gets countries
      *
-     * @return \SiSu\Client\Model\Country[]|null
+     * @return string[]|null
      */
     public function getCountries()
     {
@@ -354,7 +354,7 @@ class InlineResponse200Tariffs implements ModelInterface, ArrayAccess
     /**
      * Sets countries
      *
-     * @param \SiSu\Client\Model\Country[]|null $countries countries where the product's tariff is applicable
+     * @param string[]|null $countries countries where the product's tariff is applicable
      *
      * @return self
      */

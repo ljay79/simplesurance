@@ -45,7 +45,7 @@ use \SiSu\Client\ObjectSerializer;
  */
 class InlineResponse200LocalizedDocuments implements ModelInterface, ArrayAccess
 {
-    public const DISCRIMINATOR = null;
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -60,7 +60,7 @@ class InlineResponse200LocalizedDocuments implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'country' => '\SiSu\Client\Model\Country',
+        'country' => 'string',
         'language' => '\SiSu\Client\Model\Language',
         'currency' => '\SiSu\Client\Model\CurrencyCode',
         'documents' => '\SiSu\Client\Model\Items[]'
@@ -230,7 +230,7 @@ class InlineResponse200LocalizedDocuments implements ModelInterface, ArrayAccess
     /**
      * Gets country
      *
-     * @return \SiSu\Client\Model\Country|null
+     * @return string|null
      */
     public function getCountry()
     {
@@ -240,7 +240,7 @@ class InlineResponse200LocalizedDocuments implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param \SiSu\Client\Model\Country|null $country country
+     * @param string|null $country country
      *
      * @return self
      */

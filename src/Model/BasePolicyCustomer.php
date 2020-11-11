@@ -45,7 +45,7 @@ use \SiSu\Client\ObjectSerializer;
  */
 class BasePolicyCustomer implements ModelInterface, ArrayAccess
 {
-    public const DISCRIMINATOR = null;
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -64,10 +64,10 @@ class BasePolicyCustomer implements ModelInterface, ArrayAccess
         'last_name' => 'string',
         'address' => '\SiSu\Client\Model\BasePolicyCustomerAddress',
         'email' => 'string',
-        'date_of_birth' => '\SiSu\Client\Model\UpdatedAt',
+        'date_of_birth' => '\DateTime',
         'salutation' => 'string',
         'tax_number' => 'string',
-        'citizenship' => '\SiSu\Client\Model\Country',
+        'citizenship' => 'string',
         'phone_number' => 'string'
     ];
 
@@ -397,7 +397,7 @@ class BasePolicyCustomer implements ModelInterface, ArrayAccess
     /**
      * Gets date_of_birth
      *
-     * @return \SiSu\Client\Model\UpdatedAt|null
+     * @return \DateTime|null
      */
     public function getDateOfBirth()
     {
@@ -407,7 +407,7 @@ class BasePolicyCustomer implements ModelInterface, ArrayAccess
     /**
      * Sets date_of_birth
      *
-     * @param \SiSu\Client\Model\UpdatedAt|null $date_of_birth date_of_birth
+     * @param \DateTime|null $date_of_birth date_of_birth
      *
      * @return self
      */
@@ -478,7 +478,7 @@ class BasePolicyCustomer implements ModelInterface, ArrayAccess
     /**
      * Gets citizenship
      *
-     * @return \SiSu\Client\Model\Country|null
+     * @return string|null
      */
     public function getCitizenship()
     {
@@ -488,7 +488,7 @@ class BasePolicyCustomer implements ModelInterface, ArrayAccess
     /**
      * Sets citizenship
      *
-     * @param \SiSu\Client\Model\Country|null $citizenship citizenship
+     * @param string|null $citizenship citizenship
      *
      * @return self
      */

@@ -45,7 +45,7 @@ use \SiSu\Client\ObjectSerializer;
  */
 class CreatePoliciesRequestEntry implements ModelInterface, ArrayAccess
 {
-    public const DISCRIMINATOR = null;
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -60,8 +60,8 @@ class CreatePoliciesRequestEntry implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'customer' => '\SiSu\Client\Model\Customer',
-        'holder' => '\SiSu\Client\Model\Customer',
+        'customer' => '\SiSu\Client\Model\BasePolicyCustomer',
+        'holder' => '\SiSu\Client\Model\BasePolicyCustomer',
         'gdpr_consent' => 'bool',
         'marketing_consent' => 'bool',
         'insured_objects' => '\SiSu\Client\Model\CreatePoliciesRequestEntryInsuredObjects[]',
@@ -320,7 +320,7 @@ class CreatePoliciesRequestEntry implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \SiSu\Client\Model\Customer
+     * @return \SiSu\Client\Model\BasePolicyCustomer
      */
     public function getCustomer()
     {
@@ -330,7 +330,7 @@ class CreatePoliciesRequestEntry implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \SiSu\Client\Model\Customer $customer customer
+     * @param \SiSu\Client\Model\BasePolicyCustomer $customer customer
      *
      * @return self
      */
@@ -344,7 +344,7 @@ class CreatePoliciesRequestEntry implements ModelInterface, ArrayAccess
     /**
      * Gets holder
      *
-     * @return \SiSu\Client\Model\Customer|null
+     * @return \SiSu\Client\Model\BasePolicyCustomer|null
      */
     public function getHolder()
     {
@@ -354,7 +354,7 @@ class CreatePoliciesRequestEntry implements ModelInterface, ArrayAccess
     /**
      * Sets holder
      *
-     * @param \SiSu\Client\Model\Customer|null $holder holder
+     * @param \SiSu\Client\Model\BasePolicyCustomer|null $holder holder
      *
      * @return self
      */

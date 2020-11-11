@@ -45,7 +45,7 @@ use \SiSu\Client\ObjectSerializer;
  */
 class InlineResponse200Products implements ModelInterface, ArrayAccess
 {
-    public const DISCRIMINATOR = null;
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -64,7 +64,7 @@ class InlineResponse200Products implements ModelInterface, ArrayAccess
         'product_type' => 'string',
         'insurance_company' => '\SiSu\Client\Model\InlineResponse200InsuranceCompany',
         'specification' => '\SiSu\Client\Model\InlineResponse200Specification',
-        'active_from' => '\SiSu\Client\Model\UpdatedAt',
+        'active_from' => '\DateTime',
         'identifiers' => 'string[]',
         'tariffs' => '\SiSu\Client\Model\InlineResponse200Tariffs[]',
         'localized_documents' => '\SiSu\Client\Model\InlineResponse200LocalizedDocuments[]',
@@ -362,7 +362,7 @@ class InlineResponse200Products implements ModelInterface, ArrayAccess
     /**
      * Gets active_from
      *
-     * @return \SiSu\Client\Model\UpdatedAt|null
+     * @return \DateTime|null
      */
     public function getActiveFrom()
     {
@@ -372,7 +372,7 @@ class InlineResponse200Products implements ModelInterface, ArrayAccess
     /**
      * Sets active_from
      *
-     * @param \SiSu\Client\Model\UpdatedAt|null $active_from active_from
+     * @param \DateTime|null $active_from active_from
      *
      * @return self
      */

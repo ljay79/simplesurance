@@ -45,7 +45,7 @@ use \SiSu\Client\ObjectSerializer;
  */
 class Installements implements ModelInterface, ArrayAccess
 {
-    public const DISCRIMINATOR = null;
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -60,9 +60,9 @@ class Installements implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'due_date' => '\SiSu\Client\Model\UpdatedAt',
+        'due_date' => '\DateTime',
         'billing_amount' => '\SiSu\Client\Model\BillingPrice',
-        'confirmed_at' => '\SiSu\Client\Model\UpdatedAt'
+        'confirmed_at' => '\DateTime'
     ];
 
     /**
@@ -224,7 +224,7 @@ class Installements implements ModelInterface, ArrayAccess
     /**
      * Gets due_date
      *
-     * @return \SiSu\Client\Model\UpdatedAt|null
+     * @return \DateTime|null
      */
     public function getDueDate()
     {
@@ -234,7 +234,7 @@ class Installements implements ModelInterface, ArrayAccess
     /**
      * Sets due_date
      *
-     * @param \SiSu\Client\Model\UpdatedAt|null $due_date due_date
+     * @param \DateTime|null $due_date due_date
      *
      * @return self
      */
@@ -272,7 +272,7 @@ class Installements implements ModelInterface, ArrayAccess
     /**
      * Gets confirmed_at
      *
-     * @return \SiSu\Client\Model\UpdatedAt|null
+     * @return \DateTime|null
      */
     public function getConfirmedAt()
     {
@@ -282,7 +282,7 @@ class Installements implements ModelInterface, ArrayAccess
     /**
      * Sets confirmed_at
      *
-     * @param \SiSu\Client\Model\UpdatedAt|null $confirmed_at confirmed_at
+     * @param \DateTime|null $confirmed_at confirmed_at
      *
      * @return self
      */

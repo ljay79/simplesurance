@@ -46,7 +46,7 @@ use \SiSu\Client\ObjectSerializer;
  */
 class CreatePoliciesRequestPaymentAcceptanceParams implements ModelInterface, ArrayAccess
 {
-    public const DISCRIMINATOR = null;
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.

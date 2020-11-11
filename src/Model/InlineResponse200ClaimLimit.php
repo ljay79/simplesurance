@@ -45,7 +45,7 @@ use \SiSu\Client\ObjectSerializer;
  */
 class InlineResponse200ClaimLimit implements ModelInterface, ArrayAccess
 {
-    public const DISCRIMINATOR = null;
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -60,7 +60,7 @@ class InlineResponse200ClaimLimit implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'country' => '\SiSu\Client\Model\Country',
+        'country' => 'string',
         'number' => 'int'
     ];
 
@@ -218,7 +218,7 @@ class InlineResponse200ClaimLimit implements ModelInterface, ArrayAccess
     /**
      * Gets country
      *
-     * @return \SiSu\Client\Model\Country|null
+     * @return string|null
      */
     public function getCountry()
     {
@@ -228,7 +228,7 @@ class InlineResponse200ClaimLimit implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param \SiSu\Client\Model\Country|null $country country
+     * @param string|null $country country
      *
      * @return self
      */
