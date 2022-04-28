@@ -180,9 +180,9 @@ class BasePolicyIdentifiers implements ModelInterface, ArrayAccess
     const KEY_PRICE = 'PRICE';
     const KEY_SKU = 'SKU';
     const KEY_PURCHASE_PROOF_REFERENCE = 'PURCHASE_PROOF_REFERENCE';
-    
+    const KEY_MARKETING_CONSENT = 'MARKETING_CONSENT';
 
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -203,9 +203,10 @@ class BasePolicyIdentifiers implements ModelInterface, ArrayAccess
             self::KEY_PRICE,
             self::KEY_SKU,
             self::KEY_PURCHASE_PROOF_REFERENCE,
+            self::KEY_MARKETING_CONSENT,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
