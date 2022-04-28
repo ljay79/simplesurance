@@ -1,4 +1,4 @@
-# OpenAPI\Client\CoreApi
+# SiSu\Client\CoreApi
 
 All URIs are relative to *https://policy-api.simplesurance.de*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## cancelPolicy
 
-> \OpenAPI\Client\Model\Ok cancelPolicy($policy_number, $cancel_policy_request)
+> \SiSu\Client\Model\Ok cancelPolicy($policy_number, $cancel_policy_request)
 
 
 
@@ -27,17 +27,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SiSu\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CoreApi(
+$apiInstance = new SiSu\Client\Api\CoreApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $policy_number = new \stdClass; // object | 
-$cancel_policy_request = new \OpenAPI\Client\Model\CancelPolicyRequest(); // \OpenAPI\Client\Model\CancelPolicyRequest | 
+$cancel_policy_request = new \SiSu\Client\Model\CancelPolicyRequest(); // \SiSu\Client\Model\CancelPolicyRequest | 
 
 try {
     $result = $apiInstance->cancelPolicy($policy_number, $cancel_policy_request);
@@ -54,11 +54,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **policy_number** | [**object**](../Model/.md)|  |
- **cancel_policy_request** | [**\OpenAPI\Client\Model\CancelPolicyRequest**](../Model/CancelPolicyRequest.md)|  |
+ **cancel_policy_request** | [**\SiSu\Client\Model\CancelPolicyRequest**](../Model/CancelPolicyRequest.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Ok**](../Model/Ok.md)
+[**\SiSu\Client\Model\Ok**](../Model/Ok.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ## createPolicies
 
-> \OpenAPI\Client\Model\CreatePoliciesResponse createPolicies($create_policies_request)
+> \SiSu\Client\Model\CreatePoliciesResponse createPolicies($create_policies_request)
 
 
 
@@ -90,16 +90,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SiSu\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CoreApi(
+$apiInstance = new SiSu\Client\Api\CoreApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_policies_request = new \OpenAPI\Client\Model\CreatePoliciesRequest(); // \OpenAPI\Client\Model\CreatePoliciesRequest | 
+$create_policies_request = new \SiSu\Client\Model\CreatePoliciesRequest(); // \SiSu\Client\Model\CreatePoliciesRequest | 
 
 try {
     $result = $apiInstance->createPolicies($create_policies_request);
@@ -115,11 +115,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_policies_request** | [**\OpenAPI\Client\Model\CreatePoliciesRequest**](../Model/CreatePoliciesRequest.md)|  |
+ **create_policies_request** | [**\SiSu\Client\Model\CreatePoliciesRequest**](../Model/CreatePoliciesRequest.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreatePoliciesResponse**](../Model/CreatePoliciesResponse.md)
+[**\SiSu\Client\Model\CreatePoliciesResponse**](../Model/CreatePoliciesResponse.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ## getPolicy
 
-> \OpenAPI\Client\Model\Policy getPolicy($policy_number)
+> \SiSu\Client\Model\Policy getPolicy($policy_number)
 
 
 
@@ -151,10 +151,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SiSu\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CoreApi(
+$apiInstance = new SiSu\Client\Api\CoreApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Policy**](../Model/Policy.md)
+[**\SiSu\Client\Model\Policy**](../Model/Policy.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ## listPolicies
 
-> \OpenAPI\Client\Model\ListPoliciesResponse listPolicies($page, $per_page, $external_id, $policy_number, $email, $sorting_column, $sorting_direction)
+> \SiSu\Client\Model\ListPoliciesResponse listPolicies($page, $per_page, $external_id, $policy_number, $email, $sorting_column, $sorting_direction)
 
 
 
@@ -212,10 +212,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SiSu\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CoreApi(
+$apiInstance = new SiSu\Client\Api\CoreApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -226,7 +226,7 @@ $per_page = 56; // int |
 $external_id = 'external_id_example'; // string | 
 $policy_number = 200000001231; // string | 
 $email = 'email_example'; // string | 
-$sorting_column = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\ListPoliciesSorting(); // \OpenAPI\Client\Model\ListPoliciesSorting | 
+$sorting_column = new \SiSu\Client\Model\\SiSu\Client\Model\ListPoliciesSorting(); // \SiSu\Client\Model\ListPoliciesSorting | 
 $sorting_direction = 'sorting_direction_example'; // string | 
 
 try {
@@ -248,12 +248,12 @@ Name | Type | Description  | Notes
  **external_id** | **string**|  | [optional]
  **policy_number** | **string**|  | [optional]
  **email** | **string**|  | [optional]
- **sorting_column** | [**\OpenAPI\Client\Model\ListPoliciesSorting**](../Model/.md)|  | [optional]
+ **sorting_column** | [**\SiSu\Client\Model\ListPoliciesSorting**](../Model/.md)|  | [optional]
  **sorting_direction** | **string**|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListPoliciesResponse**](../Model/ListPoliciesResponse.md)
+[**\SiSu\Client\Model\ListPoliciesResponse**](../Model/ListPoliciesResponse.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **city** | **string** |  | 
-**country** | [**\OpenAPI\Client\Model\Country**](Country.md) |  | 
+**country** | [**\SiSu\Client\Model\Country**](Country.md) |  | 
 **house_number** | **string** |  | [optional] 
 **region** | **string** |  | [optional] 
 **street** | **string** |  | 

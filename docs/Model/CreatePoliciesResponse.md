@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**policies** | [**\OpenAPI\Client\Model\BasePolicy[]**](BasePolicy.md) |  | [optional] 
+**policies** | [**\SiSu\Client\Model\BasePolicy[]**](BasePolicy.md) |  | [optional] 
 **sale_id** | **string** |  | [optional] 
 **payment_url** | **string** |  | [optional] 
 
