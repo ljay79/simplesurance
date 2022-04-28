@@ -1,4 +1,4 @@
-# OpenAPI\Client\ProductApi
+# SiSu\Client\ProductApi
 
 All URIs are relative to *https://policy-api.simplesurance.de*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## listProducts
 
-> \OpenAPI\Client\Model\InlineResponse200 listProducts($page, $per_page, $categories, $countries, $product_types, $integration_type, $sorting_column, $sorting_direction)
+> \SiSu\Client\Model\InlineResponse200 listProducts($page, $per_page, $categories, $countries, $product_types, $integration_type, $sorting_column, $sorting_direction)
 
 
 
@@ -24,10 +24,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SiSu\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductApi(
+$apiInstance = new SiSu\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\SiSu\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
